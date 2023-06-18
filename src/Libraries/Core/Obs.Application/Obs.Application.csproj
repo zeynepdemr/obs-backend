@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Common\Obs.Common\Obs.Common.csproj" />
+      <ProjectReference Include="..\Obs.Domain\Obs.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

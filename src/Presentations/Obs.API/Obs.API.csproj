@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.5" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.7">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\..\..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+      <Content Update="appsettings.Development.json">
+        <DependentUpon>appsettings.json</DependentUpon>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Common\Obs.Common\Obs.Common.csproj" />
+      <ProjectReference Include="..\..\Libraries\Core\Obs.Application\Obs.Application.csproj" />
+      <ProjectReference Include="..\..\Libraries\Core\Obs.Domain\Obs.Domain.csproj" />
+      <ProjectReference Include="..\..\Libraries\Infrastructure\Obs.Infrastructure\Obs.Infrastructure.csproj" />
+      <ProjectReference Include="..\..\Libraries\Infrastructure\Obs.Persistence\Obs.Persistence.csproj" />
+    </ItemGroup>
+
+</Project>
